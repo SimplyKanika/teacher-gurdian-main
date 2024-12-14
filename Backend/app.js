@@ -36,6 +36,9 @@ app.use('/api', signupRoutes);  // Correcting the path to use '/api/signup' as i
 const loginRoutes = require('./src/routes/login.route');
 app.use('/api/login', loginRoutes);
 
+const profileRoutes = require ('./src/routes/profileRoutes');
+app.use('/api/profile', profileRoutes);
+
 const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
     console.log(`Server running at port ${PORT}`);

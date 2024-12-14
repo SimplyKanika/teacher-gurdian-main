@@ -1,4 +1,4 @@
-const dbconfig = require("./src/config/db.config.js");
+const dbconfig = require("../config/db.config.js");
 
 const Sequelize= require("sequelize");
 
@@ -19,7 +19,7 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
-db.signup = require("./src/models/signup.model.js")(sequelize,Sequelize);
-db.login = require('./src/models/login.model.js')(sequelize, Sequelize);
+db.signup = require("./signup.model.js")(sequelize,Sequelize);
+db.login = require('./login.model.js')(sequelize, Sequelize);
 
 module.exports = db;
