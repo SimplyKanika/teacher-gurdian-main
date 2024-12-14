@@ -1,4 +1,4 @@
-const Signup = require('../models/Signup');
+const Signup = require('../models/signup.model');
 
 exports.getProfile = async (req, res) => {
   const { email } = req.params; // Extract email from the URL params
